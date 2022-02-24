@@ -1,34 +1,45 @@
 import java.util.*;
-class question1
-{
-    public static void main(String Args[])
-    {
-        Scanner sc = new Scanner(System.in);
-        int n,num,d=0,rev=0;
-        System.out.println("Enter the num");
-        n=sc.nextInt();
-        num=n;
-        while(num > 0)
-        {
-            d=num%10;
-            rev=(rev*10)+d;
-            num=num/10;
-        }
-        if(n == rev)
-            System.out.println("It is a Palindrome ");
-        else
-            System.out.println("It is not a Palindrome ");
-        num=n;
-        rev=0;
-        while(num > 0)
-        {
-            d=num%10;
-            rev=rev+(d*d*d);
-            num=num/10;    
-        }
-        if(n == rev)
-            System.out.println("It is an Armstrong Number ");
-        else
-            System.out.println("It is not an Armstrong Number");
-    }
+
+class question1{
+     String name;
+     int roll_number;
+     String branch;
+     char section;
+     String university;
+     double cgpa;
+     double sgpa;
+
+public void getdata(){
+    Scanner in = new Scanner(System.in);
+    System.out.println("Enter student's name : ");
+    name = in.nextLine();
+    System.out.println("Enter roll number : ");
+    roll_number = in.nextInt();
+    System.out.println("Enter student's branch : ");
+    branch = in.next();
+    System.out.println("Enter student's section : ");
+    section = in.next().charAt(0);
+    System.out.println("Enter student's University : ");
+    university = in.next();
+    System.out.println("Enter student's CGPA : ");
+    cgpa = in.nextDouble();
+    System.out.println("Enter student's SGPA :'");
+    sgpa = in.nextDouble();
+}
+
+public void display(){
+    System.out.println("Name :" + name);
+    System.out.println("Roll Number :" + roll_number);
+    System.out.println("Branch : " + branch);
+    System.out.println("Section : " + section);
+    System.out.println("University : " + university);
+    System.out.println("CGPA : " + cgpa);
+    System.out.println("SGPA : " + sgpa);
+}
+
+public static void main(String[] args){
+    question1 obj = new question1();
+    obj.getdata();
+    obj.display();
+}
 }

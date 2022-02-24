@@ -1,22 +1,10 @@
-import java.io.*;
-  
-class question5 {
-    public static void main(String[] args)
-    {
-        int product = 1, sum = 0, ld;
-        int n = 22;
-        while (n > 0) {
-            ld = n % 10;
-            sum = sum + ld;
-            product = product * ld;
-            n = n / 10;
-        }
-  
-        if (sum == product)
-            System.out.println(
-                "Given number is spy number");
-        else
-            System.out.println(
-                "Given number is not spy number");
-    }
-}
+public class question5  
+{  
+public static void main(String args[])  
+{  
+int x = Integer.parseInt(args[0]); //first arguments   
+int y = Integer.parseInt(args[1]); //second arguments  
+int sum = x + y;  
+System.out.println("The sum of x and y is: " +sum);  
+}  
+}  
